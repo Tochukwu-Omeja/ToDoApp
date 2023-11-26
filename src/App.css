@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(72, 163, 82, 1) 0%,
+    rgba(128, 196, 105, 1) 100%
+  );
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 520px;
+  min-height: 600px;
+  text-align: center;
+  background: #161a2b;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+ .todo-app.light-mode {
+  background: #7e7373;
+}
+  
+ .todo-app.dark-mode {
+  background: #161a2b;
+}
+
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.h1.light-mode {
+  background: black;
+}
+  
+ .h1.dark-mode {
+  background: #fff;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.6; /* Slightly higher opacity */
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #34d399; /* Green border color */
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #a0aec0; /* Lighter placeholder text color */
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 107, 107, 1) 0%,
+    /* Red gradient start color */ rgba(255, 71, 71, 1) 100%
+      /* Red gradient end color */
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid #3182ce; /* Blue border color */
+}
+
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(249, 168, 37, 1) 0%,
+    /* Yellow gradient start color */ rgba(245, 101, 84, 1) 100%
+      /* Yellow gradient end color */
+  );
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 107, 107, 1) 0%,
+    /* Red gradient start color */ rgba(255, 71, 71, 1) 100%
+      /* Red gradient end color */
+  );
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.todo-row:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgba(249, 168, 37, 1) 0%,
+    /* Yellow gradient start color */ rgba(245, 101, 84, 1) 100%
+      /* Yellow gradient end color */
+  );
+}
+
+.todo-row:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 12, 241, 1) 0%,
+    /* Purple gradient start color */ rgba(250, 0, 135, 1) 100%
+      /* Purple gradient end color */
+  );
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    /* Blue gradient start color */ rgba(17, 122, 255, 1) 100%
+      /* Blue gradient end color */
+  );
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.edit-icon {
+  color: #fff;
+}
